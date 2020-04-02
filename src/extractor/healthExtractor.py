@@ -9,7 +9,7 @@ ACTIVE_MEMORY_INDEX = 2
 INACTIVE_MEMORY_INDEX = 3
 WIRED_MEMORY_INDEX = 6
 
-class systemInfo():
+class healthExtractor():
     def __init__(self):
         self.matcher = re.compile('\d+')
     
