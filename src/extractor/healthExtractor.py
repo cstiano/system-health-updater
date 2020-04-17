@@ -73,8 +73,3 @@ class healthExtractor():
                 'disk': self.get_disk_stats()
             }
         )
-
-# TEST TODO - DROP
-# if __name__ == "__main__":
-#     sys_info = systemInfo()
-#     print(sys_info.get_all_system_statistics())
