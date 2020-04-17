@@ -10,8 +10,9 @@ INACTIVE_MEMORY_INDEX = 3
 WIRED_MEMORY_INDEX = 6
 
 class healthExtractor():
-    def __init__(self):
+    def __init__(self, cpu_time_analyzes = 1):
         self.matcher = re.compile('\d+')
+        self.cpu_time_analyzes =  cpu_time_analyzes
     
     def get_cpu_count(self):
         return os.cpu_count()
@@ -20,8 +21,7 @@ class healthExtractor():
         return [x / os.cpu_count() * 100 for x in os.getloadavg()][-1]
 
     def get_cpu_percent(self):
-        # TODO this method need a interval to get the percent - check what would be the ideal
-        return psutil.cpu_percent()
+        return psutil.cpu_percent(self.cpu_time_analyzes)
     
     def get_total_ram(self):
         total_ram = subprocess.run(['sysctl', 'hw.memsize'], stdout=subprocess.PIPE).stdout.decode('utf-8')

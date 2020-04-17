@@ -9,6 +9,6 @@ class healthService():
     def post(self, healthJson):
         url = self.baseUrl + self.route
         if validators.url(url) and url != None:
-            return (requests.post(url, json=healthJson), None)
+            return requests.post(url, json=healthJson), None
         else :
-            return (None, -1)
+            return None, -1
