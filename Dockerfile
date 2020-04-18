@@ -3,6 +3,8 @@ FROM python:3.6-alpine
 COPY ./src /app
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN apk update \
+    && apk add build-base linux-headers
+RUN pip install --trusted-host pypi.org  -r requirements.txt
 
-CMD [ "python", "./main.py <baseURL> <route>"]
+CMD [ "python", "./main.py https://postman-echo.com /post"]

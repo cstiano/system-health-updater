@@ -1,3 +1,5 @@
+#!/usr/local/bin/python
+
 from extractor.healthExtractor import healthExtractor
 from communication.healthService import healthService
 import sys
