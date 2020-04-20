@@ -4,7 +4,7 @@ System Health Updater is a tool that gets a list of health informations of the m
 
 The json object with all the health data follow this format bellow:
 
-```json
+```
 {
     'cpu_count': NUMBER, 
     'cpu_load': NUMBER, 
