@@ -31,7 +31,7 @@ The json object with all the health data follow this format bellow:
 
 ### Configuration
 
-Before run the Dockerfile, change the the <BASE_URL> and <ROUTE> at the Dockerfile, with the base url and route that you want to send the POST request of the System Health Updater.
+Before run the Dockerfile, change the the BASE_URL and ROUTE at the Dockerfile, with the base url and route that you want to send the POST request of the System Health Updater.
 
 ```
 CMD [ "python", "./main.py <BASE_URL> <ROUTE>"]
